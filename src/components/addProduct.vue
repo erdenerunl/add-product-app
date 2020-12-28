@@ -36,6 +36,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   data() {
     return {
@@ -43,6 +44,7 @@ export default {
         title: null,
         count: null,
         price: null,
+        totalPrice: null,
         selectedImage: null,
       },
     };
@@ -52,6 +54,15 @@ export default {
       const file = e.target.files[0];
       this.product.selectedImage = URL.createObjectURL(file);
     },
+    addProduct(){
+      this.product.totalPrice = this.product.count * this.product.price;
+      axios.post('http://localhost:3000/products', this.product).then(() => {
+        this.emitter.emit('addProduct', this.product )
+        
+      });
+
+
+    }
   },
 };
 </script>

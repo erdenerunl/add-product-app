@@ -1,10 +1,27 @@
 {
-    "products" : [
-        {
-            "id": 1,
-            "title" : "product1",
-            "count" : 5,
-            "price" : 100
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "title": "product1",
+      "count": 5,
+      "price": 100,
+      "totalPrice": 500
+    },
+    {
+      "title": "deneme",
+      "count": "5",
+      "price": "10",
+      "totalPrice": 50,
+      "selectedImage": "blob:http://localhost:8080/2aa7da2f-dacb-4197-8dd7-778cf7d403c8",
+      "id": 2
+    },
+    {
+      "title": "new product",
+      "count": "5",
+      "price": "100",
+      "totalPrice": 500,
+      "selectedImage": "blob:http://localhost:8080/46968fd0-c4f5-4281-b0d7-efc61dfa4565",
+      "id": 3
+    }
+  ]
 }
