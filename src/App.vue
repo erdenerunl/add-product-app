@@ -1,26 +1,52 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <h2 class="text-center"> Product Tracking App </h2>
+    <hr />
+    <add-product />
+    <br>
+    <progress />
+    <br>
+    <product-container />
+  </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import addProduct from './components/addProduct.vue'
+import ProductContainer from './components/ProductContainer.vue'
+import Progress from './components/Progress.vue'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    addProduct,
+    Progress,
+    ProductContainer
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body {
+    background-color: aliceblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .card{
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .card:last-child{
+    margin-right: 0px;
+  }
+
+  .col-md-2{
+    max-width: 15.666667%!important;
+  }
+
+  .product-container{
+    margin-left: 15px;
+  }
+
 </style>
